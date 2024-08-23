@@ -1,5 +1,5 @@
 import React from 'react';
-import hamza from '../images/hamza.jpeg'
+import hamza from '../images/kebir.jpeg'
 import { useEffect } from 'react';
 import Typed from 'typed.js';
 
