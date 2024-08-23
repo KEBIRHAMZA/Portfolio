@@ -29,8 +29,8 @@ const Hero = () => {
           </div>
           <div className="w-full flex flex-col justify-center gap-4 text-white dark:text-gray-800 md:mt-0 sm:mt-8 xs:mt-4">
             <h1 className="text-4xl font-semibold font-serif">Hello, I'm KEBIR Hamza</h1>
-            <h3 className="capitalize text-rose-400">i'm <span className="typing text-green-500 dark:text-green-700">fullstack developer</span></h3>
-            <p>full-stack developer Laravel, ReactJs</p>
+            <h3 className="capitalize text-rose-400">I'm <span className="typing text-green-500 dark:text-green-700">fullstack developer</span></h3>
+            <p>Junior Full Stack Web Developer specializing in React.js and Laravel. Passionate about web development, I create responsive, efficient web applications and I'm eager to take on new challenges to grow my skills and contribute to impactful projects.</p>
             <div className="sm:mt-4 xs:mt-2">
               <button className="px-6 py-1 bg-rose-500 text-white rounded-sm">Get In Touch</button>
             </div>
