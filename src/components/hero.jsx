@@ -8,7 +8,7 @@ const Hero = () => {
 
     useEffect(() => {
         const options = {
-          strings: ['', 'FullStack Developer,', 'Frontend Developer,', 'Backend Developer,', 'Mobile Apps Developer.'],
+          strings: ['', 'FullStack Developer,', 'Frontend Developer,', 'Backend Developer,'],
           typeSpeed: 100,
           backSpeed: 60,
           loop: true,
@@ -28,9 +28,9 @@ const Hero = () => {
             <img className="rounded-full md:max-w-[70%] sm:max-w-[50%] xs:max-w-[60%] mx-auto" src={hamza} alt="My Image" />
           </div>
           <div className="w-full flex flex-col justify-center gap-4 text-white dark:text-gray-800 md:mt-0 sm:mt-8 xs:mt-4">
-            <h1 className="text-4xl font-semibold font-serif">Hello, I'm Samuel Abera</h1>
+            <h1 className="text-4xl font-semibold font-serif">Hello, I'm KEBIR Hamza</h1>
             <h3 className="capitalize text-rose-400">i'm <span className="typing text-green-500 dark:text-green-700">fullstack developer</span></h3>
-            <p>Experienced full-stack developer with 4+ years of expertise in Laravel, NestJS, Nuxt.js, Next.js, Android, and some Flutter experience.</p>
+            <p>full-stack developer Laravel, ReactJs</p>
             <div className="sm:mt-4 xs:mt-2">
               <button className="px-6 py-1 bg-rose-500 text-white rounded-sm">Get In Touch</button>
             </div>
