@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
 import logo from '../images/logo.png';
 
 const Navbar = () => {
     const [t, i18n] = useTranslation('global');
+    const [activeSection, setActiveSection] = useState('');
 
-    const HandleChangeLanguage = (lang) => {
+    const handleChangeLanguage = (lang) => {
         i18n.changeLanguage(lang);
+    };
+
+    const handleClick = (section) => {
+        setActiveSection(section);
     };
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,8 +23,8 @@ const Navbar = () => {
     return (
         <div className="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-lg z-50">
             {/* {t("message")}
-            <button onClick={() => HandleChangeLanguage("en") } >En</button>
-            <button onClick={() => HandleChangeLanguage("fr") } >Fr</button> */}
+            <button onClick={() => handleChangeLanguage("en") } >En</button>
+            <button onClick={() => handleChangeLanguage("fr") } >Fr</button> */}
             <header className="lg:px-16 px-4 flex flex-wrap items-center py-4">
                 <div className="flex-1 flex justify-between items-center">
                     <span className="text-white font-bold text-3xl">KEBIR</span>
@@ -35,12 +39,60 @@ const Navbar = () => {
                 <div className="hidden md:flex md:items-center md:w-auto w-full" id="menu">
                     <nav>
                         <ul className="md:flex items-center justify-between text-base text-gray-100 dark:text-gray-600 pt-4 md:pt-0">
-                            <li><a className="md:p-4 py-3 px-0 block text-rose-500" href="#home">Home</a></li>
-                            <li><a className="md:p-4 py-3 px-0 block" href="#about">About Me</a></li>
-                            <li><a className="md:p-4 py-3 px-0 block" href="#education">Education</a></li>
-                            <li><a className="md:p-4 py-3 px-0 block" href="#experience">Experience</a></li>
-                            <li><a className="md:p-4 py-3 px-0 block" href="#projects">Projects</a></li>
-                            <li><a className="md:p-4 py-3 px-0 block md:mb-0 mb-2" href="#contact">Contact</a></li>
+                            <li>
+                                <a
+                                    className={`md:p-4 py-3 px-0 block ${activeSection === 'home' ? 'text-rose-500' : ''}`}
+                                    href="#home"
+                                    onClick={() => handleClick('home')}
+                                >
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className={`md:p-4 py-3 px-0 block ${activeSection === 'about' ? 'text-rose-500' : ''}`}
+                                    href="#about"
+                                    onClick={() => handleClick('about')}
+                                >
+                                    About Me
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className={`md:p-4 py-3 px-0 block ${activeSection === 'education' ? 'text-rose-500' : ''}`}
+                                    href="#education"
+                                    onClick={() => handleClick('education')}
+                                >
+                                    Education
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className={`md:p-4 py-3 px-0 block ${activeSection === 'experience' ? 'text-rose-500' : ''}`}
+                                    href="#experience"
+                                    onClick={() => handleClick('experience')}
+                                >
+                                    Experience
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className={`md:p-4 py-3 px-0 block ${activeSection === 'projects' ? 'text-rose-500' : ''}`}
+                                    href="#projects"
+                                    onClick={() => handleClick('projects')}
+                                >
+                                    Projects
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className={`md:p-4 py-3 px-0 block ${activeSection === 'contact' ? 'text-rose-500' : ''}`}
+                                    href="#contact"
+                                    onClick={() => handleClick('contact')}
+                                >
+                                    Contact
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>

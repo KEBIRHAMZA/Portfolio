@@ -19,7 +19,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <div className="w-full h-full bg-gray-900 dark:bg-gray-200">
+        <div id="home" className="w-full h-full bg-gray-900 dark:bg-gray-200">
             <div className="h-screen w-full mx-auto py-20 xl:px-16 xs:px-8 flex flex-col md:flex-row gap-4 justify-center items-center pb-10 pt-4">
                 <div className="w-full md:w-1/2 flex justify-center md:justify-start">
                     <img
