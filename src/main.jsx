@@ -22,7 +22,9 @@ i18next.init({
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <I18nextProvider i18n = {i18next}>
-      <App />
+      <div className="w-full h-full bg-gray-900 dark:bg-gray-200">
+       <App />
+      </div>
     </I18nextProvider>
   </StrictMode>,
 )
