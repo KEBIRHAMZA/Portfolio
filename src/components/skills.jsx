@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const skillCategories = [
-  { category: 'Front-End Development', skills: [
+  { category: 'Front-End', skills: [
       { name: 'React.js', percentage: '85%', color: '#FF6464', dashArray: '85px, 100px' },
       { name: 'HTML', percentage: '90%', color: '#FF6464', dashArray: '90px, 100px' },
       { name: 'CSS', percentage: '80%', color: '#FF6464', dashArray: '80px, 100px' },
@@ -10,7 +10,7 @@ const skillCategories = [
       { name: 'Tailwind CSS', percentage: '75%', color: '#FF6464', dashArray: '75px, 100px' }
     ]
   },
-  { category: 'Back-End Development', skills: [
+  { category: 'Back-End', skills: [
       { name: 'Laravel', percentage: '80%', color: '#9272D4', dashArray: '80px, 100px' },
       { name: 'PHP', percentage: '85%', color: '#9272D4', dashArray: '85px, 100px' },
     ]
@@ -85,7 +85,7 @@ const Skills = () => {
   }, [visible]);
 
   return (
-    <div id="skills" className="relative h-screen flex flex-col justify-center items-center dark:bg-gray-800 p-4">
+    <div id="skills" className="relative min-h-screen flex flex-col justify-center items-center dark:bg-gray-800 p-4">
       <div ref={ref} className="max-w-6xl mx-auto w-full overflow-hidden">
         <h1 className="text-4xl md:text-5xl text-center text-white font-bold mb-8">Technical Skills</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
