@@ -1,5 +1,7 @@
 import React from 'react';
 import hamza from '../images/file.jpg';
+import Lottie from 'lottie-react'
+import AnimationData from '../images/animation1.json'
 
 const About = () => {
     return (
@@ -29,11 +31,12 @@ const About = () => {
                 </div>
             </div>
             <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <img
+                {/* <img
                     className="h-72 w-full object-cover object-top sm:h-80 md:h-96 lg:w-full lg:h-full"
                     src={hamza}
                     alt=""
-                />
+                /> */}
+                <Lottie animationData={AnimationData} className="h-72 w-full object-cover object-top sm:h-80 md:h-96 lg:w-full lg:h-full"/>
             </div>
         </div>
     );
