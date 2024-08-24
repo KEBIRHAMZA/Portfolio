@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import hamza from '../images/kebir.jpeg';
 import Typed from 'typed.js';
-import video from '../images/video.mp4';
+import video from '../../public/video.mp4';
 
 const Hero = () => {
     useEffect(() => {
