@@ -102,10 +102,10 @@ const Navbar = () => {
                                     className={`md:p-4 py-3 px-0 block ${
                                         activeSection === 'experience' ? 'text-rose-500' : ''
                                     }`}
-                                    href="#experience"
+                                    href="#skills"
                                     onClick={() => handleClick('experience')}
                                 >
-                                    Experience
+                                    Skills & Tools
                                 </a>
                             </li>
                             <li>

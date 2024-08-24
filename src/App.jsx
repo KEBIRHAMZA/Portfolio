@@ -3,6 +3,7 @@ import About from './components/about'
 import Timeline from './components/education'
 import Hero from './components/hero'
 import Navbar from './components/navbar'
+import Skills from './components/skills'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Hero/>
       <About/>
       <Timeline/>
+      <Skills/>
     </>
   )
 }
