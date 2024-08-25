@@ -1,11 +1,38 @@
-import React from 'react';
-import hamza from '../images/file.jpg';
-import Lottie from 'lottie-react'
-import AnimationData from '../images/animation1.json'
+import React, { useEffect, useRef, useState } from 'react';
+import Lottie from 'lottie-react';
+import AnimationData from '../images/animation1.json';
 
 const About = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    const aboutRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (aboutRef.current) {
+            observer.observe(aboutRef.current);
+        }
+
+        return () => {
+            if (aboutRef.current) {
+                observer.unobserve(aboutRef.current);
+            }
+        };
+    }, []);
+
     return (
-        <div id="about" className="relative bg-gray-900 text-white overflow-hidden mt-16">
+        <div
+            id="about"
+            className="relative bg-gray-900 text-white overflow-hidden mt-16"
+            ref={aboutRef}
+        >
             <div className="max-w-7xl mx-auto">
                 <div className="relative z-10 pb-8 bg-gray-900 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
                     <svg
@@ -18,7 +45,11 @@ const About = () => {
                         <polygon points="50,0 100,0 50,100 0,100" />
                     </svg>
                     <div className="pt-1" />
-                    <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                    <main
+                        className={`mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 ${
+                            isVisible ? 'slide-in-left' : 'opacity-0'
+                        }`}
+                    >
                         <div className="sm:text-center lg:text-left">
                             <h2 className="my-6 text-2xl tracking-tight font-extrabold text-white sm:text-3xl md:text-4xl">
                                 About me
@@ -30,13 +61,15 @@ const About = () => {
                     </main>
                 </div>
             </div>
-            <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                {/* <img
+            <div
+                className={`lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 ${
+                    isVisible ? 'slide-in-right' : 'opacity-0'
+                }`}
+            >
+                <Lottie
+                    animationData={AnimationData}
                     className="h-72 w-full object-cover object-top sm:h-80 md:h-96 lg:w-full lg:h-full"
-                    src={hamza}
-                    alt=""
-                /> */}
-                <Lottie animationData={AnimationData} className="h-72 w-full object-cover object-top sm:h-80 md:h-96 lg:w-full lg:h-full"/>
+                />
             </div>
         </div>
     );

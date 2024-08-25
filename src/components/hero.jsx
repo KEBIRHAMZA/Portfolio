@@ -21,7 +21,6 @@ const Hero = () => {
 
     return (
         <div id="home" className="relative w-full h-screen bg-gray-900 dark:bg-gray-200">
-            {/* Background Video */}
             <video
                 src={video}
                 autoPlay
@@ -31,11 +30,9 @@ const Hero = () => {
                 className="absolute top-0 left-0 w-full h-full object-cover z-0"
             />
 
-            {/* Overlay */}
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
 
-            {/* Content */}
-            <div className="relative z-20 h-full flex flex-col md:flex-row gap-4 justify-center items-center px-8 md:px-16 py-20">
+            <div className="relative z-20 h-full flex flex-col md:flex-row gap-4 justify-center items-center px-8 md:px-16 py-20 fade-in">
                 <div className="w-full md:w-1/2 flex justify-center md:justify-start">
                     <img
                         className="rounded-full md:max-w-[70%] sm:max-w-[40%] xs:max-w-[30%] md:block hidden"
