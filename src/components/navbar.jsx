@@ -94,7 +94,7 @@ const Navbar = () => {
                                     href="#education"
                                     onClick={() => handleClick('education')}
                                 >
-                                    Education
+                                    Education & Experience
                                 </a>
                             </li>
                             <li>

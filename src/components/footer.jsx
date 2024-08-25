@@ -6,7 +6,7 @@ const Footer = () => {
       <nav className="flex justify-center flex-wrap gap-6 text-white font-medium">
         <a className="hover:text-gray-400" href="#home">Home</a>
         <a className="hover:text-gray-400" href="#about">About</a>
-        <a className="hover:text-gray-400" href="#education">Education</a>
+        <a className="hover:text-gray-400" href="#education">Education & Experience</a>
         <a className="hover:text-gray-400" href="#skills">Skills & Tools</a>
         <a className="hover:text-gray-400" href="#projects">Projects</a>
         <a className="hover:text-gray-400" href="#contact">Contact</a>
