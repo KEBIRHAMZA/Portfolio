@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import About from './components/about'
 import Timeline from './components/education'
 import Footer from './components/footer'

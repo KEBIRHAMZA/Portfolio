@@ -49,7 +49,17 @@ const Hero = () => {
                         Junior Full Stack Web Developer specializing in React.js and Laravel. Passionate about web development, I create responsive, efficient web applications and I'm eager to take on new challenges to grow my skills and contribute to impactful projects.
                     </p>
                     <div className="sm:mt-4 xs:mt-2">
-                        <button className="px-6 py-1 bg-rose-500 text-white rounded-sm">Get In Touch</button>
+                        {/* Replacing the button with your custom button */}
+                        <div className="button" data-tooltip="Download">
+                            <div className="button-wrapper">
+                                <div className="text">Resume</div>
+                                <span className="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
